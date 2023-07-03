@@ -48,7 +48,7 @@ def recommendSeries() -> None:
             with col1:
                 st.image(poster, width=200)
             with col2:
-                styled_title = f'<a href="{url}" style="color:black; font-size:1.2em;">{title}</a>'
+                styled_title = f'<a href="{url}" style="color:red; font-size:1.2em;">{title}</a>'
                 st.markdown(styled_title, unsafe_allow_html=True)
                 st.write(description[0:400] + ' ...')
             animeCount += 1
