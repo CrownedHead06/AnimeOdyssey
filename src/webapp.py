@@ -27,7 +27,7 @@ description = """Anime Odyssey is a community originally formed by a passionate 
 
 This system became a beacon of hope for anime enthusiasts who often found themselves at a loss for what to watch next. By utilizing his own experiences and preferences, TECH TITAN curated a collection of personalized recommendations for each user. Now, with just a few clicks, any otaku can receive tailored suggestions based on their favorite anime series or movies. Whether one enjoys action-packed shounen adventures or heartwarming slice-of-life tales, Anime Odyssey's recommendation engine ensures that no one feels lost in the vast sea of anime again."""
 
-st.sidebar.header('What is Anime Odyssey? 🥷')
+st.sidebar.title('What is Anime Odyssey? 🥷')
 st.sidebar.write(description)
 
 
