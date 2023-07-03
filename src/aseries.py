@@ -58,3 +58,21 @@ def recommendSeries() -> None:
         if animeCount > 15:
             break
     
+
+# import pickle
+# import numpy as np
+
+# similarity = pickle.load(open('./assets/bin/series_similarity.pkl', 'rb'))
+# print(similarity.shape)
+
+# divide = (similarity.shape[0] + 1) // 2
+# # print(divide)
+
+# first_half = similarity[0:divide]
+# second_half = similarity[divide:]
+# print(first_half.shape, second_half.shape)
+
+# print(type(first_half), type(similarity), type(second_half))
+
+# pickle.dump(first_half, open('./assets/bin/series_similarity1.pkl', 'wb'))
+# pickle.dump(second_half, open('./assets/bin/series_similarity2.pkl', 'wb'))
