@@ -61,15 +61,12 @@ if choice == 'By name of a Series/Movie':
 
 
 # if user chose '1' option
-if choice == 'Describe an anime in your words':
+if choice == 'By Describing an anime in your words':
     # page header
     st.title('Anime Odyssey: Embark on a Journey of Recommendations 🥷')
 
     # catch the error if you can
-    try:
-        recommendAnimes() 
-    except:
-        pass
+    recommendAnimes() 
 
     # copyright section
     st.markdown('# ')

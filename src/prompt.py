@@ -2,7 +2,6 @@ import pandas as pd
 import pickle
 from pathlib import Path
 import streamlit as st
-import sklearn
 from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
 model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
