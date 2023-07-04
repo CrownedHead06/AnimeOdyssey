@@ -1,8 +1,12 @@
+# import appropriate libraries
 import streamlit as st
 from PIL import Image
 from pathlib import Path
+
+# importing helper files
 from aseries import recommendSeries
 from amovies import recommendMovies
+from prompt import recommendAnimes
 
 # page configuration
 st.set_page_config(
@@ -17,9 +21,9 @@ st.sidebar.image(logo, caption='ANIME ODYSSEY')
 
 # choose a option
 choice = st.sidebar.radio(
-    'How would you like to get recommend: 🧐',
+    'How would you like to get recommended: 🧐',
     ['By name of a Series/Movie', 
-     'Describe an anime in your words']
+     'By Describing an anime in your words']
 )
 
 # What is Anime Odyssey?
@@ -61,8 +65,11 @@ if choice == 'Describe an anime in your words':
     # page header
     st.title('Anime Odyssey: Embark on a Journey of Recommendations 🥷')
 
-    # text area
-    describe = st.text_area('Describe an Anime in your own words to get recommendations')
+    # catch the error if you can
+    try:
+        recommendAnimes() 
+    except:
+        pass
 
     # copyright section
     st.markdown('# ')
