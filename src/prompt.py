@@ -1,14 +1,24 @@
 import pandas as pd
+import numpy as np
 import pickle
 from pathlib import Path
 import streamlit as st
-from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
 model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
 
 # read binary and dataset 
 animes = pd.read_csv(Path.cwd()/'datasets/anime_series.csv')
 vectors = pickle.load(open(Path.cwd()/'assets/bin/vectors.pkl', 'rb'))
+
+# making cosine_similarity function
+def cosine_similarity(embeddings, vectors):
+    similarity = list()
+    for vector in vectors:
+        dot_product = np.dot(embeddings, vector)
+        norm1 = np.linalg.norm(embeddings)
+        norm2 = np.linalg.norm(vector)
+        similarity.append(dot_product / (norm1 * norm2))
+    return np.array(similarity)
 
 # take description as input from user
 def userInput():
@@ -19,7 +29,7 @@ def userInput():
     embeddings = model.encode(describe)
 
     # check similarity b/w description of user and all animes
-    similarity = cosine_similarity(embeddings.reshape(1, 384), vectors)
+    similarity = cosine_similarity(embeddings.reshape(1, 384), vectors).reshape(1, animes.shape[0])
 
     return similarity
 
