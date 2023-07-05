@@ -3,8 +3,8 @@ import numpy as np
 import pickle
 from pathlib import Path
 import streamlit as st
-from sentence_transformers import SentenceTransformer
-model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+import tensorflow_hub as hub
+model = hub.load('https://tfhub.dev/google/universal-sentence-encoder/4')
 
 # read binary and dataset 
 animes = pd.read_csv(Path.cwd()/'datasets/anime_series.csv')
@@ -26,10 +26,10 @@ def userInput():
     describe = st.text_area('Describe an Anime in your own words to get recommendations')
     
     # convert description to vector
-    embeddings = model.encode(describe)
+    embeddings = model.embed([describe])
 
     # check similarity b/w description of user and all animes
-    similarity = cosine_similarity(embeddings.reshape(1, 384), vectors).reshape(1, animes.shape[0])
+    similarity = cosine_similarity(embeddings, vectors)
 
     return similarity
 
