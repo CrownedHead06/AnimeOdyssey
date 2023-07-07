@@ -20,7 +20,7 @@ logo = Image.open(Path.cwd()/'assets/pictures/logo.png')
 st.sidebar.image(logo, caption='ANIME ODYSSEY')
 
 # choose one of below 2
-choice = st.sidebar.selectbox(
+choice = st.sidebar.radio(
     'How would you like to get recommeded?',
     ('By name of a Series/Movie', 
     'By Describing an anime in your words')
