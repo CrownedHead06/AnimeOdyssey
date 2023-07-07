@@ -1,4 +1,10 @@
-# import appropriate libraries
+"""
+This script contains the main function to run the PaperWhiz Streamlit app.
+
+@Date: July 1st, 2023
+@Author: Tech Titan
+"""
+
 import streamlit as st
 from PIL import Image
 from pathlib import Path
