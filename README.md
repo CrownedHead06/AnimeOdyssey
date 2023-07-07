@@ -16,7 +16,7 @@ This system became a beacon of hope for anime enthusiasts who often found themse
 
 In essence, Anime Odyssey serves as a gathering place where anime enthusiasts can connect, engage in discussions, and discover new shows to immerse themselves in. With its dedicated community and user-friendly recommender system, Anime Odyssey aims to enhance the anime-watching experience for otakus, ensuring that they always have an exciting anime adventure waiting just a click away.
 
-## 🥽 Social Media Handles
+## 🚀 Social Media Handles
 <!-- [![Reddit](https://static.vecteezy.com/system/resources/previews/018/930/474/original/reddit-logo-reddit-icon-transparent-free-png.png)](https://www.reddit.com/r/AnimeOdyssey/) -->
 
 <a href="https://www.reddit.com/r/AnimeOdyssey/"><img src="https://static.vecteezy.com/system/resources/previews/018/930/474/original/reddit-logo-reddit-icon-transparent-free-png.png" alt="Reddit" width="60" height="60"></a>
