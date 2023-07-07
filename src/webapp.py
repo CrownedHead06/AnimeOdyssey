@@ -19,12 +19,12 @@ st.set_page_config(
 logo = Image.open(Path.cwd()/'assets/pictures/logo.png')
 st.sidebar.image(logo, caption='ANIME ODYSSEY')
 
-# choose a option
-choice = st.sidebar.radio(
-    'How would you like to get recommended: 🧐',
-    ['By name of a Series/Movie', 
-     'By Describing an anime in your words']
-)
+# choose one of below 2
+choice = st.sidebar.selectbox(
+    'How would you like to get recommeded?',
+    ('By name of a Series/Movie', 
+    'By Describing an anime in your words')
+) 
 
 # What is Anime Odyssey?
 description = """Anime Odyssey is a community originally formed by a passionate otaku who shared his love for anime across various social media platforms. Over time, he recognized a common dilemma among his fellow members - the struggle to find new anime series or movies to watch after finishing their current favorites. To address this issue, he took a bold step and created an anime recommender system.
