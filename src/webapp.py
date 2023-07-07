@@ -34,42 +34,46 @@ This system became a beacon of hope for anime enthusiasts who often found themse
 st.sidebar.title('What is Anime Odyssey? 🥷')
 st.sidebar.write(description)
 
+def main():
+    # if user chose '0' option
+    if choice == 'By name of a Series/Movie':
+        # page header
+        st.title('Anime Odyssey: Embark on a Journey of Recommendations 🥷')
 
-# if user chose '0' option
-if choice == 'By name of a Series/Movie':
-    # page header
-    st.title('Anime Odyssey: Embark on a Journey of Recommendations 🥷')
+        # divide the section into two columns
+        col1, col2 = st.columns(2)
 
-    # divide the section into two columns
-    col1, col2 = st.columns(2)
+        # select one
+        with col1:
+            option = st.selectbox('Select Anime Type: 👇', ['Anime Series', 'Anime Movies'])
 
-    # select one
-    with col1:
-        option = st.selectbox('Select Anime Type: 👇', ['Anime Series', 'Anime Movies'])
-
-    # now time to start suggesting
-    if option == 'Anime Series':
-        try:
-            recommendSeries()
-        except:
-            pass
-    if option == 'Anime Movies':
-        try:
-            recommendMovies()
-        except:
-            pass
+        # now time to start suggesting
+        if option == 'Anime Series':
+            try:
+                recommendSeries()
+            except:
+                pass
+        if option == 'Anime Movies':
+            try:
+                recommendMovies()
+            except:
+                pass
 
 
-# if user chose '1' option
-if choice == 'By Describing an anime in your words':
-    # page header
-    st.title('Anime Odyssey: Embark on a Journey of Recommendations 🥷')
+    # if user chose '1' option
+    if choice == 'By Describing an anime in your words':
+        # page header
+        st.title('Anime Odyssey: Embark on a Journey of Recommendations 🥷')
 
-    # catch the error if you can
-    recommendAnimes() 
+        # catch the error if you can
+        recommendAnimes() 
 
     # copyright section
     st.markdown('# ')
     st.markdown('# ')
     copyright = "&copy; 2023 Tech Titans Inc. All rights reserved."
     st.markdown(f'<p style="text-align:center;">{copyright}</p>', unsafe_allow_html=True)
+
+
+if __name__ == "__main__":
+    main()

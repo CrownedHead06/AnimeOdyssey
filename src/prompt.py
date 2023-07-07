@@ -4,7 +4,7 @@ import pickle
 from pathlib import Path
 import streamlit as st
 from sentence_transformers import SentenceTransformer
-model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+model = SentenceTransformer('all-MiniLM-L6-v2')
 
 # read binary and dataset 
 animes = pd.read_csv(Path.cwd()/'datasets/anime_series.csv')
