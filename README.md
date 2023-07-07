@@ -3,6 +3,12 @@
   <img src="./assets/pictures/logo.png" alt="Anime Odyssey" width="500">
 </p>
 
+<p align="center">
+  <a  href="https://animeodysseyy.streamlit.app" target="_blank">
+    <img src="https://static.streamlit.io/badges/streamlit_badge_red.svg" />
+  </a>
+</p>
+
 ## 🧐 What is Anime Odyssey?
 **Anime Odyssey** is a community originally formed by a passionate otaku who shared his love for anime across various social media platforms. Over time, he recognized a common dilemma among his fellow members - the struggle to find new anime series or movies to watch after finishing their current favorites. To address this issue, he took a bold step and created an anime recommender system.
 
