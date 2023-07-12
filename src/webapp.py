@@ -1,5 +1,5 @@
 """
-This script contains the main function to run the PaperWhiz Streamlit app.
+This script contains the main function to run the Anime Odyssey Streamlit app.
 
 @Date: July 1st, 2023
 @Author: Tech Titan
