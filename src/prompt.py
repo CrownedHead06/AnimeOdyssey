@@ -9,7 +9,7 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 # read and merge dataset 
 series = pd.read_csv(Path.cwd()/'datasets/anime_series.csv')
 movies = pd.read_csv(Path.cwd()/'datasets/anime_movies.csv')
-animes = series.append(movies)
+animes = pd.concat([series, movies])
 
 # read binary
 vectors = pickle.load(open(Path.cwd()/'assets/bin/dembeddings.pkl', 'rb'))
@@ -52,7 +52,7 @@ def recommendAnimes() -> None:
                 title = animes.iloc[i[0]].title
                 poster = animes.iloc[i[0]].poster
                 description = animes.iloc[i[0]].description
-                url = animes.iloc[i[0]].link
+                url = animes.iloc[i[0]].url
 
                 # divide the page into 2 columns
                 col1, col2 = st.columns(2)

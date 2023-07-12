@@ -39,7 +39,7 @@ def recommendSeries() -> None:
         if anime not in title and animeCount <= 15:
             poster = series.iloc[i[0]].poster
             description = series.iloc[i[0]].description
-            url = series.iloc[i[0]].link
+            url = series.iloc[i[0]].url
 
             # divide the page into 2 columns
             col1, col2 = st.columns(2)

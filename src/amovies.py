@@ -33,7 +33,7 @@ def recommendMovies() -> None:
         title = movies.iloc[i[0]].title
         poster = movies.iloc[i[0]].poster
         description = movies.iloc[i[0]].description
-        url = movies.iloc[i[0]].link
+        url = movies.iloc[i[0]].url
 
         # divide the page into 2 columns
         col1, col2 = st.columns(2)
