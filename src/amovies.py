@@ -40,8 +40,20 @@ def recommendMovies() -> None:
 
         # print the attributes on the page
         with col1:
-            st.image(poster, width=200)
+            card_style = (
+                    f"border-radius: 15px; box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2); padding: 15px;"
+                    f"background-color: white; display: inline-block; width: 250px"
+                )
+
+            st.markdown(
+                f'<a href="{poster}" target="_blank">'
+                f'<div style="{card_style}">'
+                f'<img src="{poster}" width="100%" alt="Clickable Image">'
+                f'</div></a>',
+                unsafe_allow_html=True,
+            )
+            # st.image(poster, width=200)
         with col2:
             styled_title = f'<a href="{url}" style="color:red; font-size:1.2em;">{title}</a>'
             st.markdown(styled_title, unsafe_allow_html=True)
-            st.write(description[0:400] + ' ...')
+            st.write(description[0:500] + ' ...')
