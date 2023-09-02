@@ -6,7 +6,6 @@ from pathlib import Path
 
 # read the dataframe
 movies = pd.read_csv(Path.cwd()/'datasets/anime_movies.csv')
-movies.drop(['Unnamed: 0'], axis=1, inplace=True)
 
 # read the binary
 movies_similarity = pickle.load(open(Path.cwd()/'assets/bin/movies_similarity.pkl', 'rb'))
