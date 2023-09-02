@@ -6,7 +6,6 @@ from pathlib import Path
 
 # read the dataframe
 series = pd.read_csv(Path.cwd()/'datasets/anime_series.csv')
-series.drop(['Unnamed: 0'], axis=1, inplace=True)
 
 # read the binary
 series_similarity1 = pickle.load(open(Path.cwd()/'assets/bin/series_similarity1.pkl', 'rb'))
