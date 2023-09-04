@@ -52,7 +52,7 @@ def recommendAnimes() -> None:
                 title = animes.iloc[i[0]].title
                 poster = animes.iloc[i[0]].poster
                 description = animes.iloc[i[0]].description
-                url = animes.iloc[i[0]].url
+                url = animes.iloc[i[0]].link
 
                 # divide the page into 2 columns
                 col1, col2 = st.columns(2)
