@@ -7,6 +7,7 @@ from pathlib import Path
 # read the dataframe
 series = pd.read_csv(Path.cwd()/'datasets/anime_series.csv')
 
+
 # read the binary
 series_similarity1 = pickle.load(open(Path.cwd()/'assets/bin/series_similarity1.pkl', 'rb'))
 series_similarity2 = pickle.load(open(Path.cwd()/'assets/bin/series_similarity2.pkl', 'rb'))
@@ -24,7 +25,7 @@ def chooseSeries(series: pd.DataFrame) -> str:
 
     return selectedAnime
 
-# recommend anime based on input
+# # recommend anime based on input
 def recommendSeries() -> None:
     anime = chooseSeries(series)
     index = series[series['title'] == anime].index[0]
@@ -33,12 +34,13 @@ def recommendSeries() -> None:
     animeCount = 1
     for i in distances:
         title = series.iloc[i[0]].title
+        # st.write(title)
 
         # fetch the poster and description
-        if anime not in title and animeCount <= 15:
+        if anime not in title and animeCount <= 20:
             poster = series.iloc[i[0]].poster
             description = series.iloc[i[0]].description
-            url = series.iloc[i[0]].url
+            url = series.iloc[i[0]].link
 
             # divide the page into 2 columns
             col1, col2 = st.columns(2)

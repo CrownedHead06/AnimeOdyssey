@@ -14,10 +14,11 @@ from aseries import recommendSeries
 from amovies import recommendMovies
 from prompt import recommendAnimes
 
+
 # page configuration
 st.set_page_config(
     page_title='Anime Odyssey',
-    page_icon='https://em-content.zobj.net/thumbs/120/apple/354/ninja_1f977.png',
+    page_icon="🥷",
     initial_sidebar_state='expanded'
 )
 
